@@ -7,8 +7,6 @@ my_cur = my_cnx.cursor()
 my_cur.execute("select * from pc_rivery_db.public.fruit_load_list")
 my_data_rows = my_cur.fetchall()
 
-add_my_fruit=streamlit.multiselect("what fruit would you like add?:", list(my_data_rows.index))
-
 
 streamlit.header("the fruit load contains")
 streamlit.dataframe(my_data_rows)

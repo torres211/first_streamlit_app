@@ -7,7 +7,7 @@ my_cur = my_cnx.cursor()
 my_cur.execute("select * from pc_rivery_db.public.fruit_load_list")
 my_data_rows = my_cur.fetchall()
 
-add_my_fruit = streamlit.text_input()
+add_my_fruit = streamlit.text_input('')
 streamlit.write('as',add_my_fruit)
 streamlit.header("the fruit load contains")
 streamlit.dataframe(my_data_rows)
